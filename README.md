@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
 
+This is the frontend side of sealblogg project. 
+
+I simply didnt focus the design. Just focused on services and components.
+
+# SealBlogg (General Info)
+
+Project is not completed yet but this is simply twitter(x)-like project. (Angular - Django)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
