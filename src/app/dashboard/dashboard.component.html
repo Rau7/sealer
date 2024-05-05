@@ -1,0 +1,17 @@
+<!-- home.component.html -->
+<div *ngIf="authService.isLoggedIn()">
+  <div class="grid grid-cols-4 gap-4 mt-[5vh] h-[95vh]">
+    <div class="col-span-1"><app-hashtags></app-hashtags></div>
+    <div
+      class="col-span-2 border-r-2 border-r-red-500 border-l-2 border-l-yellow-400"
+    >
+      <app-posts></app-posts>
+    </div>
+    <div class="col-span-1"><app-userprofile></app-userprofile></div>
+  </div>
+</div>
+<div *ngIf="!authService.isLoggedIn()">
+  <!-- Redirect to login page if user is not logged in -->
+  <a routerLink="/login"> click here Login</a>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,19 @@
+<div *ngIf="currentUser" class="userprofile relative h-full">
+  <div class="profile-card w-full h-[800px] flex flex-col justify-start">
+    <div class="profile-image flex justify-center items-center pt-5">
+      <img
+        class="h-40 w-40 rounded-full"
+        src="http://localhost:8000{{ currentUser.profile_picture }}"
+        alt="{{ currentUser.profile_picture }}"
+        alt=""
+      />
+    </div>
+    <div class="profile-info mt-4">
+      <h1 class="text-center text-3xl">{{ currentUser.username }}</h1>
+    </div>
+  </div>
+
+  <div class="profile-logout flex justify-center items-end gap-2">
+    <button class="absolute bottom-0" (click)="logout()">Logout</button>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<!-- login.component.html -->
+
+<div
+  class="login-container w-full h-screen flex justify-center items-center flex-col gap-20"
+>
+  <h2>SeaLBlog | Login</h2>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <form (ngSubmit)="login()">
+    <div class="form-item flex flex-col gap-2">
+      <label for="username">Username</label>
+      <input
+        class="text-black"
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="username"
+        required
+      />
+    </div>
+    <div class="form-item flex flex-col gap-2 mt-3">
+      <label for="password">Password</label>
+      <input
+        class="text-black"
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="password"
+        required
+      />
+    </div>
+
+    <button class="mt-6" type="submit">Login</button>
+  </form>
+  <p>Don't have an account? <a routerLink="/register">Register</a></p>
+</div>

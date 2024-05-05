@@ -1,0 +1,20 @@
+<div *ngFor="let post of posts" class="px-5 py-5">
+  <div class="postcard border-2 border-gray-500 p-5 rounded-lg">
+    <div
+      class="postcard-header border-b-2 border-gray-500 pb-3 flex items-center justify-between"
+    >
+      <h3>{{ post.title }}</h3>
+      <p>Likes: {{ post.likes_count }}</p>
+    </div>
+    <div class="postcard-body my-5">
+      <p>{{ post.content }}</p>
+      <p class="text-right my-3 text-md">{{ post.author_username }} sealed!</p>
+      <p class="text-right my-3 text-md">
+        Sealed at: {{ post.created_at | date : "dd/MM/yyyy HH:mm:ss" }}
+      </p>
+    </div>
+    <div class="like-button flex justify-end">
+      <button>Like</button>
+    </div>
+  </div>
+</div>
